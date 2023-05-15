@@ -1,0 +1,27 @@
+.modalOverlay {
+  @apply fixed inset-0 z-50;
+  @apply flex items-center justify-center;
+  @apply overflow-x-hidden overflow-y-auto;
+  @apply outline-none focus:outline-none;
+  @apply bg-opacity-30 bg-gray-500;
+}
+
+.modalWapper {
+  @apply relative w-auto max-w-3xl mx-auto my-6;
+}
+
+.modalContent {
+  @apply relative flex flex-col w-full bg-white;
+  @apply border-0 rounded-lg shadow-lg;
+  @apply outline-none focus:outline-none;
+}
+
+.modalHeader {
+  @apply flex items-start justify-between p-5 border-b border-solid rounded-t;
+}
+
+.buttonClose {
+  @apply p-1 ml-auto bg-transparent border-0 text-black;
+  @apply float-right text-3xl leading-none font-semibold;
+  @apply outline-none focus:outline-none bg-red-300;
+}

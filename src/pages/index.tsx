@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import Modal from "@/components/modal";
 
 export default function Home() {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
 
   return (
     <main>

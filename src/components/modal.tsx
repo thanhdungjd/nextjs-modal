@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./styles.module.css";
 
 type ModalProps = {
   children: React.ReactNode;
@@ -10,15 +11,15 @@ const Modal = ({ children, isOpen, onClose }: ModalProps) => {
   if (!isOpen) return <></>;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center overflow-x-hidden overflow-y-auto outline-none focus:outline-none bg-opacity-30 bg-gray-500">
-      <div className="relative w-auto max-w-3xl mx-auto my-6">
+    <div className={styles.modalOverlay}>
+      <div className={styles.modalWapper}>
         {/*content*/}
-        <div className="relative flex flex-col w-full bg-white border-0 rounded-lg shadow-lg outline-none focus:outline-none">
+        <div className={styles.modalContent}>
           {/*header*/}
-          <div className="flex items-start justify-between p-5 border-b border-solid rounded-t border-blueGray-200">
-            <h3 className="text-3xl font-semibold text-black">Modal Title</h3>
+          <div className={styles.modalHeader}>
+            
             <button
-              className="p-1 ml-auto bg-transparent border-0 text-black float-right text-3xl leading-none font-semibold outline-none focus:outline-none"
+              className={styles.buttonClose}
               onClick={onClose}
             >
               <span className="bg-transparent text-black h-6 w-6 text-2xl block outline-none focus:outline-none">
