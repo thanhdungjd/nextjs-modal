@@ -12,37 +12,27 @@ const Modal = ({ children, isOpen, onClose }: ModalProps) => {
 
   return (
     <div className={styles.modalOverlay}>
-      <div className={styles.modalWapper}>
+      <div className={styles.wrapper}>
         {/*content*/}
-        <div className={styles.modalContent}>
+        <div className={styles.content}>
           {/*header*/}
-          <div className={styles.modalHeader}>
-            
-            <button
-              className={styles.buttonClose}
-              onClick={onClose}
-            >
-              <span className="bg-transparent text-black h-6 w-6 text-2xl block outline-none focus:outline-none">
-                ×
-              </span>
+          <div className={styles.header}>
+            <button className={styles.buttonClose} onClick={onClose}>
+              <span className={styles.iconClose}>×</span>
             </button>
           </div>
           {/*body*/}
-          <div className="relative flex-auto p-6">{children}</div>
+          <div className={styles.body}>{children}</div>
           {/*footer*/}
-          <div className="flex items-center justify-end p-6 border-t border-solid rounded-b border-blueGray-200">
+          <div className={styles.footer}>
             <button
-              className="text-red-500 background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1"
+              className={styles.buttonCancel}
               type="button"
               onClick={onClose}
             >
-              Close
+              Ok
             </button>
-            <button
-              className="bg-blue-500 text-white active:bg-blue-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1"
-              type="button"
-              onClick={onClose}
-            >
+            <button className={styles.buttonOk} type="button" onClick={onClose}>
               Save Changes
             </button>
           </div>

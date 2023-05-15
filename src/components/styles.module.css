@@ -6,17 +6,17 @@
   @apply bg-opacity-30 bg-gray-500;
 }
 
-.modalWapper {
+.wrapper {
   @apply relative w-auto max-w-3xl mx-auto my-6;
 }
 
-.modalContent {
+.content {
   @apply relative flex flex-col w-full bg-white;
   @apply border-0 rounded-lg shadow-lg;
   @apply outline-none focus:outline-none;
 }
 
-.modalHeader {
+.header {
   @apply flex items-start justify-between p-5 border-b border-solid rounded-t;
 }
 
@@ -24,4 +24,31 @@
   @apply p-1 ml-auto bg-transparent border-0 text-black;
   @apply float-right text-3xl leading-none font-semibold;
   @apply outline-none focus:outline-none bg-red-300;
+}
+
+.body {
+  @apply relative p-6 flex-auto;
+}
+
+.iconClose {
+  @apply bg-transparent text-black h-6 w-6;
+  @apply text-2xl block outline-none focus:outline-none;
+}
+
+.footer {
+  @apply flex items-center justify-end;
+  @apply p-6 border-t border-solid;
+  @apply rounded-b;
+}
+
+.buttonCancel {
+  @apply text-red-500 bg-transparent;
+  @apply font-bold uppercase px-6 py-2;
+  @apply text-sm outline-none focus:outline-none mr-1 mb-1;
+}
+
+.buttonOk {
+  @apply bg-blue-500 text-white active:bg-blue-600;
+  @apply font-bold uppercase text-sm px-6 py-3 rounded;
+  @apply shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1;
 }
